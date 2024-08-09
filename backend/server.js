@@ -196,7 +196,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Enable CORS
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://medispanproject.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 // Set up multer for file uploads
 const upload = multer({ dest: "temp-uploads/" }); // Temporary storage
