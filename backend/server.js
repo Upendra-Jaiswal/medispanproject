@@ -227,6 +227,10 @@ app.post("/upload", upload.single("file"), (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Project is running");
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
