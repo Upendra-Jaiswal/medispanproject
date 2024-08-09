@@ -198,7 +198,7 @@ const __dirname = dirname(__filename);
 // Enable CORS
 app.use(
   cors({
-    origin: ["https://medispanproject.vercel.app"],
+    origin: ["https://medispanproject-qlpf.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
