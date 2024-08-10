@@ -198,11 +198,17 @@ const __dirname = dirname(__filename);
 // Enable CORS
 app.use(
   cors({
-    origin: ["https://medispanproject-qlpf.vercel.app"],
+    origin: [`${import.meta.env.FRONTEND_URL}`],
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
+
+// /{
+//   origin: ["https://medispanproject-qlpf.vercel.app"],
+//   methods: ["POST", "GET"],
+//   credentials: true,
+// }
 
 // Set up multer for file uploads
 const upload = multer({ dest: "temp-uploads/" }); // Temporary storage
