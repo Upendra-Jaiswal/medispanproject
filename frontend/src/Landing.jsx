@@ -253,8 +253,9 @@ const Landing = () => {
     formData.append("file", file);
 
     try {
+      // "http://localhost:3001/upload",
       const response = await axios.post(
-        "http://localhost:3001/upload",
+        `${import.meta.env.BACKEND_URL}/upload`,
         formData,
         {
           headers: {
